@@ -101,7 +101,7 @@
         --tooltip-padding-x: 7px;
         --tooltip-padding-y: 7px;
         --tooltip-offset: 8px;
-         --tooltip-transition-duration: 0.3s;
+        --tooltip-transition-duration: 0.3s;
         /* 👆 if you need a transition,
         just remove the comment,
         but I didn't like the transition :| */
@@ -284,10 +284,9 @@
                 <div class="alert alert-success">上传成功! 🥳</div>
                 <div class="input-group">
                   <input type="text" class="form-control" id="imageUrl" value="${src}">
-                  <div class="input-group-append">
 <!--                    <button class="btn btn-outline-secondary copy-btn" type="button" onclick="copyImageUrl()">复制 URL</button>-->
-<button class="copy" onclick="copyImageUrl()">
-  <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
+<button class="copy copy-btn" type="button" onclick="copyImageUrl()" style="position: absolute; top: 5px; right: 5px;">
+  <span data-text-end="✨ 复制成功!" data-text-initial="复制 URL" class="tooltip"></span>
   <span>
     <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="clipboard">
       <g>
@@ -301,7 +300,6 @@
     </svg>
   </span>
 </button>
-                  </div>
                 </div>
                 <br />
                 <img src="${src}" class="img-fluid mb-3" alt="Uploaded Image">
