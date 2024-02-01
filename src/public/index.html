@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Telegraph 图片托管</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css"
@@ -50,16 +51,17 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
-        background-color: #007bff;
+        background-color: #6c5ce7;
         color: #fff;
         border-radius: 5px;
         padding: 10px 25px;
         cursor: pointer;
         transition: background-color 0.3s;
-      }
-
-      .upload-btn-wrapper:hover {
-        background-color: #0056b3;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        font-weight: 700;
+        box-shadow: 0 5px 0 0 #a29bfe;
       }
 
       .upload-btn-wrapper input[type="file"] {
@@ -70,18 +72,23 @@
         opacity: 0;
       }
 
+      .upload-btn-wrapper:active {
+        transform: translateY(5px);
+        box-shadow: 0 0 0 0 #a29bfe;
+      }
     </style>
   </head>
   <body>
+
     <div
       class="container"
       ondragover="event.preventDefault()"
       ondrop="handleDrop(event)"
     >
       <h2 class="text-center">Telegraph 图片托管</h2>
-      <p class="text-center text-muted">免费&无限制数量图片托管</p>
+      <p class="text-center text-muted">免费&无限制数量图片托管(文件大小不能超过 5MB)</p>
       <br />
-      <div class="upload-btn-wrapper text-center">
+        <div class="upload-btn-wrapper text-center">
         <span class="upload-btn">上传图片</span>
         <input
           type="file"
