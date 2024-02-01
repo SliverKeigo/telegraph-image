@@ -157,12 +157,36 @@
             const src = window.location.origin + data[0].src;
             uploadStatus.innerHTML = `
                 <div class="alert alert-success">上传成功! 🥳</div>
-                <div class="input-group">
-                  <input type="text" class="form-control" id="imageUrl" value="${src}">
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary copy-btn" type="button" onclick="copyImageUrl()">复制 URL</button>
-                  </div>
-                </div>
+
+
+
+<div class="text-area"  >
+<span  >
+复制下面的图片地址 或者 取消重新上传
+</span>
+</div>
+<div class="url-box"  >
+<div class="copy-url" style=""  >
+<div class="input-group"  >
+<input readonly="readonly" id="url-content" class="input-sm"   type="text">
+ <div data-clipboard-target="#url-content" class="input-group-button"  >
+ <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 14 16" width="14" class="octicon octicon-clippy"  >
+ <path d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z" fill-rule="evenodd"  >
+</path>
+</svg>
+</div>
+</div>
+ <div class="re-upload"  ><svg height="26" viewBox="0 0 1024 1024" width="26" xmlns="http://www.w3.org/2000/svg"  >
+ <path d="M396.8 200.533333l64 64L384 341.333333h298.666667c119.466667 0 213.333333 93.866667 213.333333 213.333334s-93.866667 213.333333-213.333333 213.333333H298.666667v-85.333333h384c72.533333 0 128-55.466667 128-128s-55.466667-128-128-128H170.666667l226.133333-226.133334z" fill="#d73a49" p-id="7650"  >
+</path>
+</svg>
+</div>
+</div>
+</div>
+
+
+
+
                 <br />
                 <img src="${src}" class="img-fluid mb-3" alt="Uploaded Image">
             `;
@@ -181,9 +205,9 @@
         const imageUrl = document.getElementById("imageUrl");
         imageUrl.select();
         document.execCommand("copy");
-        document.querySelector(".copy-btn").textContent = "✨ 复制成功";
+        document.querySelector(".text-area").textContent = "✨ 复制成功";
         setTimeout(() => {
-          document.querySelector(".copy-btn").textContent = "复制 URL";
+          document.querySelector(".text-area").textContent = "复制下面的图片地址 或者 取消重新上传L";
         }, 1000);
       };
     </script>
