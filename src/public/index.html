@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Telegraph Image Hosting</title>
+    <title>Telegraph 图片托管</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css"
@@ -69,6 +69,7 @@
         top: 0;
         opacity: 0;
       }
+
     </style>
   </head>
   <body>
@@ -77,11 +78,11 @@
       ondragover="event.preventDefault()"
       ondrop="handleDrop(event)"
     >
-      <h2 class="text-center">Telegraph Image Hosting</h2>
-      <p class="text-center text-muted">Free & Unlimited Image Hosting</p>
+      <h2 class="text-center">Telegraph 图片托管</h2>
+      <p class="text-center text-muted">免费&无限制数量图片托管</p>
       <br />
       <div class="upload-btn-wrapper text-center">
-        <span class="upload-btn">Upload an Image</span>
+        <span class="upload-btn">上传图片</span>
         <input
           type="file"
           name="file"
@@ -93,9 +94,6 @@
       <p>
         Powered By <a href="https://telegra.ph" target="_blank">Telegraph</a>
       </p>
-      <a href="https://github.com/ifyour/cf-image-hosting" target="_blank"
-        >GitHub</a
-      >
     </div>
 
     <script>
@@ -145,14 +143,14 @@
         const formData = new FormData();
         formData.append("file", file);
 
-        document.querySelector(".upload-btn").textContent = "Uploading...";
+        document.querySelector(".upload-btn").textContent = "上传中...";
 
         fetch("/upload", { method: "POST", body: formData })
           .then((response) => response.json())
           .then((data) => {
             const src = window.location.origin + data[0].src;
             uploadStatus.innerHTML = `
-                <div class="alert alert-success">Upload successful! 🥳</div>
+                <div class="alert alert-success">上传成功! 🥳</div>
                 <div class="input-group">
                   <input type="text" class="form-control" id="imageUrl" value="${src}">
                   <div class="input-group-append">
@@ -165,11 +163,11 @@
           })
           .catch((error) => {
             uploadStatus.innerHTML =
-              '<div class="alert alert-danger">Upload failed. Please try again.</div>';
+              '<div class="alert alert-danger">上传失败. 请重新尝试.</div>';
           })
           .finally(() => {
             document.querySelector(".upload-btn").textContent =
-              "Upload an Image";
+              "上传图片";
           });
       };
 
@@ -177,9 +175,9 @@
         const imageUrl = document.getElementById("imageUrl");
         imageUrl.select();
         document.execCommand("copy");
-        document.querySelector(".copy-btn").textContent = "✨ Copied";
+        document.querySelector(".copy-btn").textContent = "✨ 复制成功";
         setTimeout(() => {
-          document.querySelector(".copy-btn").textContent = "Copy URL";
+          document.querySelector(".copy-btn").textContent = "复制 URL";
         }, 1000);
       };
     </script>
