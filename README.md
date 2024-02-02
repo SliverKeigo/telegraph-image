@@ -1,3 +1,5 @@
+[<a href="README_CN.md">Chinese (Simplified)</a>]
+
 ### Cloudflare Image Hosting
 
 Free unlimited image hosting on Telegraph, deployed on Cloudflare. Inspired by [missuo/Telegraph-Image-Hosting](https://github.com/missuo/Telegraph-Image-Hosting), thanks to Telegraph & Cloudflare.
