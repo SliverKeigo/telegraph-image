@@ -2,7 +2,7 @@
 
 ### Cloudflare 图床
 
-通过 Cloudflare 部署在 Telegraph 上的免费无限图片托管服务。灵感来自 missuo/Telegraph-Image-Hosting，感谢 Telegraph 和
+通过 Cloudflare 部署在 Telegraph 上的免费无限图片托管服务。灵感来自 [missuo/Telegraph-Image-Hosting](https://github.com/missuo/Telegraph-Image-Hosting)，感谢 Telegraph 和
 Cloudflare。
 
 #### 开发
