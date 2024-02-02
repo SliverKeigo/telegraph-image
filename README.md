@@ -28,7 +28,7 @@ How to bind a domain name？
 
 Triggers -> Custom Domains -> Add a custom domain.
 
-<img src="https://cf-image-hosting.ifyour.workers.dev/file/a7e19c9e0f169861fefa6.png" width="600">
+<img src="https://image.sliverkeigo.top/file/cd042d35a5d1ff552ba54.png" width="600">
 
 #### License
 
