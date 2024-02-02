@@ -1,4 +1,4 @@
-[<a href="README_CN.md">Chinese (Simplified)</a>]
+[<a href="README_CN.md">中文 (简体)</a>]
 
 ### Cloudflare Image Hosting
 
