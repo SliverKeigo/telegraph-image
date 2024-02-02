@@ -1,5 +1,5 @@
-import { Hono } from "hono";
-import { serveStatic } from "hono/cloudflare-workers";
+import {Hono} from "hono";
+import {serveStatic} from "hono/cloudflare-workers";
 
 const host = `https://telegra.ph`;
 const app = new Hono();
@@ -21,4 +21,3 @@ app.get("/file/:fileName", async (c) => {
   return fetch(`${host}/file/${c.req.param("fileName")}`);
 });
 
-export default app;
